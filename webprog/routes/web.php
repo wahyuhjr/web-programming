@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BookController;
+use App\Http\Controllers\HomeController;
+// use App\Http\Controllers\BookController;
+// use App\Http\Controllers\PublisherController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,27 +20,20 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('book-1', function () {
-    return view('books.book-1');
-});
-Route::get('book-2', function () {
-    return view('books.book-2');
-});
-Route::get('book-3', function () {
-    return view('books.book-3');
-});
-Route::get('book-4', function () {
-    return view('books.book-4');
-});
 
 //contact 
 Route::get('contact', function () {
     return view('contact');
 });
 
-//publisher
-Route::get('publisher', function () {
-    return view('publisher');
-});
+// Route::get('/books/{id}',[BooksController::class,'book']);
+// Route::get('/',[BooksController::class,'index']);
 
-Route::resource('/books', BookController::class);
+Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/detail-book/{id}', [HomeController::class, 'bookdetail'])->name('book-detail');
+Route::get('/publisher', [HomeController::class, 'publisher'])->name('publisher');
+Route::get('/detail-publisher/{id}', [HomeController::class, 'publisherdetail'])->name('publisherdetail');
+Route::get('/categories/{categories}', [HomeController::class, 'bookcategories'])->name('categories');
+
+// Route::resource('books', BookController::class);
+// Route::resource('publisher', PublisherController::class);

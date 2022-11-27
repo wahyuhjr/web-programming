@@ -21,9 +21,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // User::factory(5)->create();
-        // Publishers::factory(5)->create();
+        Publishers::factory(8)->create();
         // Categories::factory(5)->create();
-        Books::factory(10)->create();
+        // Books::factory(10)->create();
 
         // DB::create([
         //     ['name' => 'Mark Manson','address' => 'New York','phone' => '087781793086','email' => 'Markmanson@gmail.com'],

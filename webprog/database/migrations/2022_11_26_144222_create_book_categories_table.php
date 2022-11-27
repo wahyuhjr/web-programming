@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        // Schema::create('book_categories', function (Blueprint $table) {
-        //     $table->id();
-        //     $table->foreignId('book_id')->constrained('books')->nullable()->onDelete('cascade');
-        //     $table->foreignId('categories_id')->constrained('categories')->nullable()->onDelete('cascade');
-        //     $table->timestamps();
-        // });
+        Schema::create('book_categories', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('book_id')->constrained('books')->nullable()->onDelete('cascade');
+            $table->foreignId('categories_id')->constrained('categories')->nullable()->onDelete('cascade');
+            $table->timestamps();
+        });
     }
 
     /**

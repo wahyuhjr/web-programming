@@ -1,12 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Books;
 use App\Models\Publishers;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
-class BookController extends Controller
+
+class PublisherController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +14,9 @@ class BookController extends Controller
      */
     public function index()
     {
-        // return view('index',[
-        //     'book' => Books::all(),
+        //      return view('publisher',[
+        //     'publisher' => Publishers::all(),
         // ]);
-
     }
 
     /**
@@ -28,7 +26,7 @@ class BookController extends Controller
      */
     public function create()
     {
-
+        //
     }
 
     /**
@@ -39,7 +37,7 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        
+        //
     }
 
     /**
@@ -48,9 +46,9 @@ class BookController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Books $book)
+    public function show(Publishers $publisher, $book)
     {
-        // return view('books.book-1', compact('book'));
+        // return view('publisher.detail-publisher', compact('publisher'));
     }
 
     /**
